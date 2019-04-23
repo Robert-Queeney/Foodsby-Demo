@@ -1,0 +1,131 @@
+App{
+  background-color: #efefef;
+}
+
+
+/* Header */
+.main-header{
+  display: flex; 
+  justify-content: space-between;
+  height: 80px; 
+  align-items: center; 
+  padding: 5px; 
+}
+
+.left-menu{
+  height: 95%; 
+}
+
+.header-image{
+  max-width: 100%;
+  max-height: 100%; 
+}
+
+.menu-item{
+  margin: 10px; 
+}
+
+.menu-button{
+  margin-right: 15px; 
+  height: 50px;
+  width: 80px;  
+  color:#00a5b3; 
+  background-color: #ffffff; 
+  outline: none; 
+  border: none; 
+  box-shadow: none;
+}
+
+.icon-user{
+  font-size: 20px; 
+  margin-right: 5px; 
+}
+
+
+/* Page Header */
+
+.page-header{
+  text-align: center; 
+}
+
+H1{
+  color: #ee3C23;
+}
+
+H3{
+  color: #a9aaab;
+}
+
+/* Main Area */
+.main-area{
+  display: flex; 
+  background-color: #efefef;
+  padding: 15px; 
+  height: 350px; 
+}
+
+/* Login Area */
+.input-area{
+  width: 50vw; 
+  display: inline-flex; 
+  flex-direction: column; 
+  align-items: center;
+  border-right: 2px solid #a9aaab;
+}
+
+.H2-div{
+  display: flex; 
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+H2{
+  color: #a9aaab
+}
+
+.input-form{
+  width: 60%; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  background-color: white; 
+  padding: 15px; 
+}
+
+label{
+  width: 95%;
+}
+
+input{
+  width: 95%; 
+  height: 30px; 
+  outline: none; 
+  border: none; 
+  border-bottom: 3px solid #a9aaab; 
+  background-color: #f6f8fa; 
+  margin:  10px 0; 
+
+}
+
+.password-label{
+  width: 100%; 
+  display: flex; 
+  justify-content: space-between;
+}
+
+.login-button{
+  background-color: #ee3c23; 
+  color: white; 
+  font-weight: 600; 
+  box-shadow: none; 
+  outline: none; 
+  height: 45px; 
+  width: 65px; 
+  border-radius: 10px; 
+}
+
+.icon-search{
+  margin-right: 5px; 
+}
+
