@@ -1,4 +1,4 @@
-App{
+.App{
   background-color: #efefef;
 }
 
@@ -10,6 +10,7 @@ App{
   height: 80px; 
   align-items: center; 
   padding: 5px; 
+  background-color: white; 
 }
 
 .left-menu{
@@ -46,6 +47,7 @@ App{
 
 .page-header{
   text-align: center; 
+  background-color: #efefef;
 }
 
 H1{
@@ -115,17 +117,29 @@ input{
 }
 
 .login-button{
+  display: flex; 
+  align-items: center;
+  justify-content: center; 
   background-color: #ee3c23; 
   color: white; 
   font-weight: 600; 
   box-shadow: none; 
   outline: none; 
   height: 45px; 
-  width: 65px; 
+  width: 95px; 
   border-radius: 10px; 
+  padding: 2px; 
 }
 
 .icon-search{
   margin-right: 5px; 
+}
+
+.main-h1{
+  color: white; 
+}
+
+.main-h3{
+  color: white; 
 }
 

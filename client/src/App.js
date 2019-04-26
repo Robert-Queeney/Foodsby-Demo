@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Components/Header';
-import PageHeader from './Components/PageHeader';
-import LoginArea from './Components/LoginArea';
-import BuildingSearch from './Components/BuildingSearch'
+// import PageHeader from './Components/PageHeader';
+// import LoginArea from './Components/LoginArea';
+// import BuildingSearch from './Components/BuildingSearch'
+import LoginPage from './Pages/LoginPage';
+import HomePage from './Pages/HomePage';
 
 class App extends React.Component {
   constructor(props) {
@@ -27,9 +30,32 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <Header />
-        <PageHeader />
+      <div>
+        <Router>
+          <div className="App">
+            <Header />
+            <Switch>
+              <Route 
+                exact path="/" 
+                render={(props) => <HomePage 
+                                      {...props} 
+                                      state={this.state} 
+                                      handleChange={this.handleChange} 
+                                      handleSubmit={this.handleSubmit}
+                        />}
+              />
+              <Route
+                path="/login"
+                render={(props) => <LoginPage 
+                                      {...props} 
+                                      state={this.state} 
+                                      handleChange={this.handleChange} 
+                                      handleSubmit={this.handleSubmit}
+                                    />
+                      }
+              />
+            </Switch>
+            {/* <PageHeader />
         <div className="main-area">
           <LoginArea
             state={this.state}
@@ -37,7 +63,9 @@ class App extends React.Component {
             handleSubmit={this.handleSubmit}
           />
           <BuildingSearch />
-        </div>
+        </div> */}
+          </div>
+        </Router>
       </div>
     );
   }
