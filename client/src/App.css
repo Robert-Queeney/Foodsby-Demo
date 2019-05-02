@@ -58,15 +58,16 @@ H3{
   color: #a9aaab;
 }
 
-/* Main Area */
-.main-area{
-  display: flex; 
-  background-color: #efefef;
-  padding: 15px; 
-  height: 350px; 
-}
+
 
 /* Login Area */
+
+.login-area{
+  display: flex; 
+  margin-top: 10px; 
+  padding-bottom: 10px;   
+}
+
 .input-area{
   width: 50vw; 
   display: inline-flex; 
@@ -135,11 +136,290 @@ input{
   margin-right: 5px; 
 }
 
+/* Main Area */
+.main-area{
+  display: flex; 
+  flex-direction: column; 
+  background-color: #efefef;
+  padding: 0px; 
+  height: 2900px; ; 
+}
+
 .main-h1{
   color: white; 
 }
 
 .main-h3{
   color: white; 
+  font-family: futura-pt,sans-serif;
+  font-size: 18px; 
 }
 
+/* Main page */
+
+.jumbo-image{
+  width: 100vw; 
+  height: 490px; 
+}
+
+.jumbo-content{
+  height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.search-input-div{
+  height: 80px; 
+  display: flex; 
+  width: 70vw; 
+  align-items: center;
+  background-color: white; 
+  padding: 0px; 
+  }
+
+  .main-icon{
+    padding: 18px; 
+    text-align: center; 
+    height: 80%; 
+    color: #96989a; 
+    border-right: 3px solid #96989a; 
+    width: 12%; 
+  }
+
+  .main-input{
+    border: none; 
+    padding-left: 10px; 
+    height: 60%; 
+    font-size: 25px; 
+    background-color: white; 
+  }
+
+  .search-button{
+    height: 100%; 
+    margin: none; 
+    border: none; 
+    outline: none; 
+    background-color: #ef3a24; 
+    color: white;
+    width: 20%; 
+    font-size: 25px; 
+    font-weight: 450; 
+  }
+
+  .search-button:hover{
+    background-color:  #ec8423; 
+  }
+
+  .mr-div{
+    height: 500px; 
+    background-color: #ffffff; 
+    padding: 15vh; 
+    text-align: center; 
+  }
+
+  .mr-cards{
+    display: flex; 
+    justify-content: space-evenly;
+  }
+
+  .mr-card-body{
+    text-align: center;
+  }
+
+  /* Main Slider */
+
+  .slick-prev {
+    left: 3% !important;
+    z-index: 1;
+  }
+  .slick-next {
+    right: 3% !important;
+    z-index: 1;
+  }
+
+  .slide-cont{
+    width: 100vw;
+    height: 300px;  
+  }
+
+  .ms-stats{
+    height: 75px; 
+    margin-top: 120px; 
+    margin-left: 550px; 
+    display: flex; 
+    padding: 1px; 
+    /* padding-top: 5%;  */
+    /* height: 150px; 
+    width: 300px;  */
+    /* display: flex;   */
+  }
+
+  .ms-number-div{
+    height: 100%; 
+    color: #ef3a24; 
+    font-size: 75px; 
+    display: flex; 
+    align-content: center; 
+    align-items: center;  
+    font-weight: 500; 
+  }
+
+  .ms-text-div{
+    margin-top: 10px; 
+    height: 75px; 
+    display: flex; 
+    flex-direction: column; 
+  }
+
+  .ms-top-text{
+    overflow: hidden;
+    white-space: nowrap;
+    color: #ef3a24;
+    font-size: 35px; 
+    height: 35px; 
+    margin-bottom: -5px; 
+    font-weight: 500; 
+  }
+
+  .ms-bottom-text{
+    color: #626366;
+    font-size: 25px; 
+    font-weight: 500; 
+  }
+
+  /* Partners */
+
+  .partners-div{
+    height: 400px; 
+    background-color: #ffffff; 
+    text-align: center; 
+    padding-top: 75px; 
+  }
+
+  .partners-cards{
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    width: 100%; 
+    /* background-color: pink;  */
+    padding-left: 15vw; 
+    padding-right: 15vw; 
+  }
+
+  .partner-card{
+    width: 168px; 
+    height: 76px;  
+  }
+
+  /* testimonials */
+  .testimonials{
+    height: 95px; 
+    margin-top: 6%; 
+  }
+
+  .test{
+    padding-top: 5%; 
+    padding-left:10%; 
+    padding-right: 10%; 
+    text-align: center; 
+  }
+
+  .quotes{
+    font-size: 25px; 
+    line-height: 30px; 
+    margin-bottom: 5px; 
+    color: #626366; 
+  }
+
+  .quote-name{
+    color: #00a5b3; 
+    font-weight: 500; 
+  }
+
+  /* Selling Points */
+
+  .selling-points{
+    background-color: #efefef; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    height: 300px; 
+    width: 100%; 
+  }
+
+  .sell1{
+    height: 45px; 
+    font-size: 40px; 
+    color: #626366; 
+    margin: 1px; 
+    font-weight: 500; 
+  }
+
+  .sell2{
+    height: 70px; 
+    font-size: 65px; 
+    color: #ef3a24;
+    font-weight: 500; 
+  }
+
+  /* footer */
+
+
+  .footer{
+    background-color: #ffffff; 
+    height: 200px; 
+    display: flex; 
+    flex-direction: column; 
+  }
+
+  .footer-internal-nav{
+    height: 150px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+
+  }
+
+  .empty{
+    width: 100px; 
+  }
+
+  .footer-nav{
+    width: 45%; 
+    display: flex; 
+    justify-content: space-around; 
+  }
+
+  .footer-scroll{
+    width: 100px; 
+  }
+
+  .footer-external{
+    width: 100%;
+    display: flex; 
+    justify-content: center; 
+  }
+
+  .footer-external-nav{
+    width: 320px; 
+    display: flex; 
+    justify-content: space-around;
+  }
+
+  .scroll-button{
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    background-color: #ee3c23; 
+    color: white; 
+    font-weight: 600; 
+    box-shadow: none; 
+    outline: none; 
+    height: 45px; 
+    width: 95px; 
+    border-radius: 10px; 
+    padding: 2px; 
+  }

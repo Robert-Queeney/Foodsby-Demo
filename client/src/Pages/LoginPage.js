@@ -8,7 +8,7 @@ const LoginPage = ({handleChange, handleSubmit}) => {
     return (
         <div>
             <PageHeader />
-            <div className="main-area">
+            <div className="login-area">
                 <LoginArea
                     // state={this.state}
                     handleChange={handleChange}
