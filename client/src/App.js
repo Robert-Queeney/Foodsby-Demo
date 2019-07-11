@@ -25,7 +25,7 @@ class App extends React.Component {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: {"search": this.state.text}, 
+      body: JSON.stringify({"search": this.state.text}), 
     })
       .then(response => {
         return response.json();
@@ -42,7 +42,7 @@ class App extends React.Component {
 
   handleChange = (event) => {
     const value = event.target.value
-    if(value.length > 0){
+    if(value.length >= 0){
       this.setState({
         [event.target.name]: event.target.value
       })
