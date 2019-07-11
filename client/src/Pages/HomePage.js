@@ -11,11 +11,17 @@ import Footer from '../Components/mainComponents/footer';
 
 
 
-const HomePage = () => {
+const HomePage = ({ handleChange, handleSubmit, onTextChange, state }) => {
+    // console.log({ this.props.state })
     return (
         <div>
             <div className="main-area">
-                <MainJumbo />
+                <MainJumbo
+                    text={state.text}
+                    handleChange={handleChange}
+                    handleSubmit={handleSubmit}
+                    // onTextChange={onTextChange}
+                />
                 <MainReasons />
                 <MainSlider />
                 <Partners />
