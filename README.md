@@ -7,4 +7,3 @@ Client
 - CD into client and npm start to run
 
 
-AIzaSyDkAU-oeI3wSRlyYxzfAXMx2xN22HAN1aI
