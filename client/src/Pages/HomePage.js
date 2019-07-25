@@ -11,7 +11,7 @@ import Footer from '../Components/mainComponents/footer';
 
 
 
-const HomePage = ({ handleChange, handleSubmit, onTextChange, state }) => {
+const HomePage = ({ handleChange, handleSubmit, onTextChange, renderSuggestions, state }) => {
     // console.log({ this.props.state })
     return (
         <div>
@@ -20,6 +20,7 @@ const HomePage = ({ handleChange, handleSubmit, onTextChange, state }) => {
                     text={state.text}
                     handleChange={handleChange}
                     handleSubmit={handleSubmit}
+                    renderSuggestions={renderSuggestions}
                     // onTextChange={onTextChange}
                 />
                 <MainReasons />

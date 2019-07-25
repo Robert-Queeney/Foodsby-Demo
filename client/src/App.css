@@ -147,12 +147,13 @@ input{
 
 .main-h1{
   color: white; 
+  font-size: 65px; 
 }
 
 .main-h3{
   color: white; 
   font-family: futura-pt,sans-serif;
-  font-size: 18px; 
+  font-size: 30px; 
 }
 
 /* Main page */
@@ -194,6 +195,32 @@ input{
     height: 60%; 
     font-size: 25px; 
     background-color: white; 
+  }
+
+  .ul__div {
+    display: flex; 
+    flex-direction: column; 
+    width: 45vw; 
+    background: #ffffff; 
+    /* position: absolute;  */
+    z-index: 3; 
+  }
+
+  .ul__div li{
+    list-style-type: none;
+    text-align: left; 
+    line-height: 30px; 
+    margin: 0; 
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 20px; 
+    color: rgba(0,0,0,.73);
+    /* border-top: 1px solid grey;  */
+  }
+
+  .ul__div li:hover{
+    font-size: 21px; 
+    color: red; 
   }
 
   .search-button{
@@ -422,4 +449,51 @@ input{
     width: 95px; 
     border-radius: 10px; 
     padding: 2px; 
+  }
+
+  @media only screen and (max-width: 720px){
+
+    .main-input {
+      font-size: 15px; 
+    }
+
+    .ul__div li{
+      line-height: 18px; 
+      margin: 0; 
+      padding: 0; 
+      font-size: 13px; 
+      color: rgba(0,0,0,.73);
+      /* border-top: 1px solid grey;  */
+    }
+
+    .ul__div li:hover{
+      font-size: 14px; 
+      color: red; 
+    }
+
+    .main-h1{
+      color: white; 
+      font-size: 30px; 
+    }
+    
+    .main-h3{
+      color: white; 
+      font-family: futura-pt,sans-serif;
+      font-size: 18px; 
+    }
+
+    /* .ms-number-div{
+      font-size: 75px; 
+      display: flex; 
+      align-content: center; 
+      align-items: center;  
+      font-weight: 500; 
+    }
+  
+    .ms-text-div{
+      margin-top: 10px; 
+      height: 75px; 
+      display: flex; 
+      flex-direction: column; 
+    } */
   }

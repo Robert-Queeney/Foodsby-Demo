@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Header from './Components/Header';
 import LoginPage from './Pages/LoginPage';
 import HomePage from './Pages/HomePage';
+const key = process.env.REACT_APP_API_KEY
 
 const fetchUrl = 'http://localhost:3001/geosearch'
 
@@ -18,8 +19,14 @@ class App extends React.Component {
     }
   }
 
-  componentDidUpdate = () => {
-   
+ 
+  handleChange = (event) => {
+    const value = event.target.value
+    if(value.length >= 0){
+      this.setState({
+        [event.target.name]: event.target.value
+      })
+    }
     return fetch(`${fetchUrl}`, {
       method: 'POST',
       headers: {
@@ -31,23 +38,35 @@ class App extends React.Component {
         return response.json();
       })
       .then(data => {
-        console.log(data.predictions)
+        this.setState({ suggestions: data.predictions})
+        console.log(this.state, key)
       })
   }
 
-  // onTextChange = (e) => {
-  //   const value = e.target.value
-  //   console.log(value, "value")
-  // }
+  //functions to render and choose the suggestions
 
-  handleChange = (event) => {
-    const value = event.target.value
-    if(value.length >= 0){
-      this.setState({
-        [event.target.name]: event.target.value
-      })
-    }
+  suggestionSelected  (value) {
+    this.setState(() => ({
+        text: value, 
+        suggestions: [],
+    }))
+}
+
+  renderSuggestions = () => {
+    const { suggestions } = this.state
+      if(suggestions.length === 0){
+        return null
+      }
+        return (
+          <div className="ul__div">
+            <ul>
+              {suggestions.map((suggestion => <li onClick={() => this.suggestionSelected(suggestion.description)} >{suggestion.description}</li>))}
+            </ul>
+          </div>
+        )
+
   }
+  
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -72,6 +91,7 @@ class App extends React.Component {
                   state={this.state}
                   handleChange={this.handleChange}
                   handleSubmit={this.handleSubmit}
+                  renderSuggestions={this.renderSuggestions}
                   // onTextChange={this.onTextChange}
                 />}
               />
